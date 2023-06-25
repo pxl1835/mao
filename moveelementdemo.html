@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #myElement {
+      position: absolute;
+      left: 0;
+      top: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+	button {
+	  position:relative;
+	  width:100px;
+	  left: 0px;
+	}
+  </style>
+</head>
+<body>
+ 
+  <div id="myElement">
+    <h2>Hi There</h2>
+    <h5>How's it going?</h5>
+  </div>
+  <button id="btn">Move</button>
+  <script>
+    // Get the element
+    var el = document.getElementById("myElement");
+    // Move the element
+    //element.style.left = "200px";
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function(e){
+        el.style.left = (el.offsetLeft + 5) + "px"; 		
+    })
+  </script>
+</body>
+</html>
