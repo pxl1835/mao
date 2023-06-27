@@ -2,7 +2,7 @@
 <html>
 <head>
   <style>
-    #myElement {
+    #container {
       position: absolute;
       left: 0;
       top: 100px;
@@ -19,20 +19,24 @@
 </head>
 <body>
  
-  <div id="myElement">
-    <h2>Hi There</h2>
-    <h5>How's it going?</h5>
+  <h2 title="<h2> with Hi There">Hi There</h2>
+  <h5 title="<h5> with How'sit going?">How's it going?</h5>
+
+  <div id="container" style="left:100px;" title="container <div>">
+  
   </div>
-  <button id="btn">Move</button>
+
+  <!-- <button id="btn">Move</button>
   <script>
     // Get the element
-    var el = document.getElementById("myElement");
+    var el = document.getElementById("container");
     // Move the element
     //element.style.left = "200px";
     var btn = document.getElementById("btn");
     btn.addEventListener("click", function(e){
         el.style.left = (el.offsetLeft + 5) + "px"; 		
     })
-  </script>
+  </script> -->
+
 </body>
 </html>
