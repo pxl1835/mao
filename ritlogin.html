@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+	<!-- filial piety 
+	Begin with filial piety and fraternal love , and then see and hear
+	-->
+</head>
+
+<body>
+    <div id="top">
+        RIT
+        <!-- <img alt="Client Logo"  src="https://hrx.talx.com/Files/Division1096/Location5931232/FileType_logo/RIT Logo.JPG"> -->
+    </div>
+    <div id="container">
+        <div id="card">
+            <div id="head">
+                <h1>Online New Hire Packet</h1>
+            </div>
+            <hr />
+            <div id="body">
+                <div id="left">
+                    <div id="leftcontent">
+                        <h3>Welcome!</h3>
+                        <ul>
+                            <li>You have been directed here to
+                                complete your initial payroll and state compliance documents.</li>
+                            <li>Information is only used to identify your account
+                                and it is protected by industry SSL encryption.</li>
+                            <li>After completion of these forms,
+                                all future changes must be done at myinfo.rit.edu
+                                unless you experience a change in work location
+                                at which time you may be directed back to this portal.</li>
+                            <li>If you have any questions throughout the process,
+                                please contact the RIT Service Center at 585-475-5000 or
+                                help.rit.edu.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="right">
+                    <form action="file:///D:/ecornellhomework/mao/pgconf.html" onsubmit="javasctipt:alert('Demo!')">
+                        <h5>
+                            LOGIN ID<span>*</span>
+                            <p><input type="login" name="login"></p>
+                        </h5>
+                        <br>
+                        <h5>
+                            PASSWORD<span>*</span>
+                            <p><input type="password" name="password"></p>
+                        </h5>
+                        <p><button type="submit" value="Login">LOG IN</button></p>
+                    </form>
+                    <p><span>*</span> required fields</p>
+                </div>
+            </div>
+            <hr />
+            <div id="foot">
+                2022 RIT, All rights reserved
+                Privacy Policy | Terms of Use
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        /* border: 0;  makes hr dispear*/
+        /* font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /*    space-around;
+    space-between
+    space-evenly */
+    }
+
+    @media only screen and (max-width: 600px) {
+        #body {
+            background-color: lightblue;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            /* flex-grow: 1;  
+           flex-shrink: calc();
+           flex-basis:content; */
+        }
+    }
+
+    #container {
+        height: auto;
+        margin: 0;
+        background-color: rgb(244, 246, 246);
+        padding: 10px;
+    }
+
+    #card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 99.9%;
+        background-color: white;
+        text-align: center;
+        /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    */
+        border-radius: 10px;
+
+    }
+
+    #left {
+        margin-left: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* #leftcontent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    } */
+    #right {
+        margin-left: 50px;
+    }
+
+    #left,
+    #right {
+        font-size: 16px;
+        text-align: left;
+        width: 50%;
+    }
+
+    img {
+        max-width: 100%;
+        /* height: auto; */
+        /* Example: image "grows" 1.3 times
+         -ms-transform: scale(1.3,1.3); /* IE 9 /
+         -webkit-transform: scale(1.3,1.3); /* Safari /
+         transform: scale(1.3,1.3); */
+        /* -ms-transform: scale(0.8,0.8); IE 9 */
+        /* -webkit-transform: scale(0.8,0.8); Safari */
+        /* transform: scale(0.5,0.5); */
+        max-height: 70px;
+        vertical-align: middle;
+    }
+
+    form input {
+        width: 99%;
+        height: 30px;
+    }
+
+    span {
+        color: red;
+    }
+
+    button {
+        width: 99.9%;
+        margin-top: 20px;
+        background-color: #0d6efd;
+        border: #0d6efd;
+        color: white;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    #top {
+        text-align: center;
+        font-size: 70px;
+        font-weight: bold;
+        color: rgb(249, 126, 81);
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #head,
+    #foot,
+    #left,
+    #right {
+        padding: 10px;
+    }
+
+    #foot {
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    ul li {
+        font-weight: normal;
+        font-size: 13px;
+        list-style: none;
+        padding-top: 10px;
+    }
+</style>
+
+</html>
