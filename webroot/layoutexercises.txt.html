@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    * {
-       padding: 0;
-       margin: 0;
-       border: 0;
-       text-align: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-<!-- 
+    <!-- 
     p1. Create a replica of the webpage template in vs code by entering a ! 
         and hit enter key without moving the mouse cursor . 
 -->
@@ -32,20 +32,18 @@
 <!--
     1. Create a <div> in <body>, the <div>'s width: 100%; of <body>,   height 100px; 
        pick a background-color different than <body>;
-       text in this <div> is PGCONF NYC .
+       text in <div> is PGCONF NYC .
 -->
-<div style="width:100%; height: 50px; background-color: green;">
+<div style="width: 100%; height: 50px; background-color: azure;">
     PGCONF NYC
 </div>
-
-
 
 <!--
     2. Create a <div> in <body>, the <div>'s width: 100%; of <body>,   height 200px; 
        pick a background-color different than <body>;
-       text in this <div> is PGCONF Logo .
+       text in <div> is PGCONF Logo .
 -->
-<div style="width:100%;height:200px;background-color:lightgreen;">
+<div style="width: 100%; height: 100px; background-color:aqua;">
     PGCONF Logo
 </div>
 
@@ -55,42 +53,110 @@
        pick a background-color different than <body>;
        text in the <div> is main container div, center it by adding its css: margin-left:auto; margin-right:auto;
 -->
-<div style="width: 90%; height: 1000px; background-color: rgb(37, 78, 113); margin-left: auto; margin-right: auto;">
+<div style="width: 80%; height: 1000px; background-color:aquamarine;
+margin-left: auto; margin-right: auto;">
     main container div
-      <!-- 3.1  Create a <div> in the main container div, 
+    <!-- p4 move all the following exercise instructions 
+     into the main container div
+     with the instruction number 3 earlier
+-->
+
+       <!-- 3.1  Create a <div> in the main container div, 
                  the <div>'s width: 100%; of its parent,  height: 400px;  
                  pick a background-color different than its parent; 
                  text in this <div> is container 1 . 
        -->
-       <div style="width:100%;height:400px;background-color: aqua;">container 1
-           <div style="width:30%;height: 100%;background-color: bisque;display: inline-block;"></div>
-           <div style="width:30%;height: 100%;background-color: rgb(55, 50, 44);display: inline-block;"></div>
-           <div style="width:30%;height: 100%;background-color: rgb(128, 114, 96);display: inline-block;"></div>
+       <div style="width: 100%; height: 400px; background-color:blanchedalmond;">
+           container 1
+           <!-- 
+           p5. move all the following exercise instructions 3.1.1  -  3.1.3
+               into the container div 1 numbered 3.1 instruction:
+       -->
+       <!-- 
+           3.1.1 Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is JOIN US IN NEW YORK CITY! . 
+       -->
+       <div style="width: 30%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           JOIN US IN NEW YORK CITY!
        </div>
-       
+       <!-- 
+           3.1.2  Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is POSTGRESQL COMMUNITY 
+       -->
+       <div style="width: 30%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           POSTGRESQL COMMUNITY
+       </div>  
+       <!-- 
+            3.1.3  Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is SUSTAINABILITY  
+        -->
+        <div style="width: 30%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           SUSTAINABILITY
+        </div>
+       </div>
+
        <!-- 3.2  Create a <div> in the main container div, 
                  the <div>'s width: 100%; of its parent,  height: 150px;  
                  pick a background-color different than its parent; 
                  text in this <div> is container 2 . 
        -->
-       <div style="width:100%;height:150px;background-color: rgb(100, 133, 133);">container 2</div>
-       
+       <div style="width: 100%; height: 150px; background-color:aqua">
+        container 2
+       </div>
        <!-- 3.3  Create a <div> in the main container div, 
                  the <div>'s width: 100%; of its parent,  height: 300px;  
                  pick a background-color different than its parent; 
                  text in this <div> is container 3 . 
        -->
-       <div style="width:100%;height:300px;background-color: rgb(33, 43, 43);">container 3
-           <div style="width:40%;height: 100%;background-color: rgb(55, 50, 44);display: inline-block;"></div>
-           <div style="width:40%;height: 100%;background-color: rgb(128, 114, 96);display: inline-block;"></div>
+       <div style="width: 100%; height: 300px; background-color:blanchedalmond;">
+        container 3
+        <!--
+             p6. move all the following exercise instructions 3.3.1  -  3.3.2
+                 into the container div 3 numbered 3.3 instruction:
+         -->
+        <!--
+            3.3.1 Create a <div> in the container div 3,
+                  the <div>'s width: 40%; of its parent,  height: 100%;
+                  display: inline-block;
+                  pick a background-color different than its parent;
+                  text in this <div> is Call for Presentations Opens
+        -->
+        <div style="width: 40%; height: 100%; background-color:blueviolet;
+                    display: inline-block;">
+             Call for Presentations Opens
+        </div>
+        <!--
+            3.3.2  Create a <div> in the container div 3,
+                  the <div>'s width: 40%; of its parent,  height: 100%;
+                  display: inline-block;
+                  pick a background-color different than its parent;
+                  text in this <div> is Early Bird Registration Closes
+        -->
+        <div style="width: 40%; height: 100%; background-color:blueviolet;
+                    display: inline-block;">
+             Early Bird Registration Closes
+        </div>
        </div>
-
        <!-- 3.4  Create a <div> in the main container div, 
                  the <div>'s width: 100%; of its parent,  height: 150px;  
                  pick a background-color different than its parent; 
                  text in this <div> is container 4 . 
        -->
-       <div style="width:100%;height:150px;background-color: rgb(186, 206, 206);">container 4</div>
+       <div style="width: 100%; height: 150px; background-color:blueviolet">
+        container 4
+       </div>
 </div>
 
 
@@ -99,103 +165,12 @@
        pick a background-color different than <body>; 
        text in the <div> is footer .    
 -->
-<div style="width: 100%; height:100px; background-color:darkblue; color:white;">footer</div>
+<div style="width: 100%; height: 50px; background-color:cadetblue">
+    footer
+</div>
 
-       <!-- 
-           p4. move all the following exercise instructions 
-               into the main container div 
-        -->
-
-       <!-- 3.1  Create a <div> in the main container div, 
-                 the <div>'s width: 100%; of its parent,  height: 400px;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is container 1 . 
-       -->
-       <!-- 3.2  Create a <div> in the main container div, 
-                 the <div>'s width: 100%; of its parent,  height: 150px;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is container 2 . 
-       -->
-       <!-- 3.3  Create a <div> in the main container div, 
-                 the <div>'s width: 100%; of its parent,  height: 300px;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is container 3 . 
-       -->
-       <!-- 3.4  Create a <div> in the main container div, 
-                 the <div>'s width: 100%; of its parent,  height: 150px;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is container 4 . 
-       -->
-
-       <!-- 
-           p5. move all the following exercise instructions 
-               into the container div 1 numbered 3.1 instruction:
-               3.1.1  -  3.1.4 
-       -->
-       <!-- 
-           3.1.1 Create a <div> in the container div 1, 
-                 the <div>'s width: 30%; of its parent,  height: 100%;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is JOIN US IN NEW YORK CITY! . 
-       -->
-       <!-- 
-           3.1.2  Create a <div> in the container div 1, 
-                 the <div>'s width: 30%; of its parent,  height: 100%;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is POSTGRESQL COMMUNITY 
-       -->  
-       <!-- 
-            3.1.3  Create a <div> in the container div 1, 
-                 the <div>'s width: 30%; of its parent,  height: 100%;  
-                 pick a background-color different than its parent; 
-                 text in this <div> is SUSTAINABILITY  
-        -->
-        
-       <!--
-        </div>
-        <div>container 2(in main container div)
-            <div>IMPORTANT DATES</div>
-        </div>
-        <div>container 3(in main container div)
-            <div>Call for Presentations Opens</div>
-            <div>Early Bird Registration Closes</div>
-        </div>
-        <div>container 4(in main container div)
-            <div>SAFETY PROTOCOLS</div>
-        </div> -->
-    
-<title>
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    2. Create a <div> in <body>: height 200px; width 100% of <body>; pick a background-color different than <body>; text in <div> is logo .
-    3. Create a <div> in <body>: height 800px; width 100% of <body>; pick a background-color different than <body>; text in <div> is main container div .
-    4. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is footer .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-</title>
-<title>
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    2. Create a <div> in <body>: height 200px; width 100% of <body>; pick a background-color different than <body>; text in <div> is logo .
-    3. Create a <div> in <body>: height 800px; width 100% of <body>; pick a background-color different than <body>; text in <div> is main container div .
-    4. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is footer .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-</title>
-<title>
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    2. Create a <div> in <body>: height 200px; width 100% of <body>; pick a background-color different than <body>; text in <div> is logo .
-    3. Create a <div> in <body>: height 800px; width 100% of <body>; pick a background-color different than <body>; text in <div> is main container div .
-    4. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is footer .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-    1. Create a <div> in <body>: height 100px; width 100% of <body>; pick a background-color different than <body>; text in <div> is manu bar .
-</title>
 
 
 </body>
 </html>
-
-
-
 
