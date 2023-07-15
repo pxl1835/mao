@@ -13,7 +13,8 @@
         }
     </style>
     <script>
-        //show container 1-4 : ?c
+        //show empty body: ?b=0
+        //show container 1-4 : ?c or c1=0
         //hide container 1-4 : ?c=0
         //show c1 : ?c1
         //hide c1 : ?c1=0
@@ -34,14 +35,20 @@
                 var x = location.search.substr(1).split("&");
                 var c = document.getElementsByClassName("c");
                 var c1 = document.getElementsByClassName("c1");
+                var b  = document.body.getElementsByTagName("*");
                 for (var i=0; i<x.length; i++)
                 {
                     var y = x[i].split("=");
                     switch (y[0])
                     {
-                        case "c":   if (y.length==1) 
+                        case "b":   if (y.length==1)
+                                        show(b);
+                                    else
+                                        hide(b);
+                                    break;
+                        case "c":   if (y.length==1)
                                         show(c);
-                                    else 
+                                    else
                                         hide(c);
                                     break;
                         case "c1" : show(c);
@@ -81,8 +88,9 @@
        text in <div> is PGCONF NYC .
 -->
 <div style="width: 100%; height: 50px; background-color: azure;"
-     title="show container 1-4: ?c;
-hide container 1-4: ?c=0;
+     title="show empty body: url?b=0;
+show body containers: ?c=0;
+show container 1-4: ?c1=0;
 show c1: ?c1; 
 hide c1: ?c1=0" >
     PGCONF NYC
