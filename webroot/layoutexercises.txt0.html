@@ -12,52 +12,59 @@
             text-align: center;
         }
     </style>
-    <script>
-        //show container 1-4 : ?c
-        //hide container 1-4 : ?c=0
-        //show c1 : ?c1
-        //hide c1 : ?c1=0
-        function show(c, d = "block") {
-            for(let i of c)
-                i.style.display = d;
-        };
-        function hide(c) {
-            for(let i of c)
-                i.style.display = "none";
-        };
+   <script>
+    //show empty body: ?b=0
+    //show container 1-4 : ?c or c1=0
+    //hide container 1-4 : ?c=0
+    //show c1 : ?c1
+    //hide c1 : ?c1=0
+    function show(c, d = "block") {
+        for(let i of c)
+            i.style.display = d;
+    };
+    function hide(c) {
+        for(let i of c)
+            i.style.display = "none";
+    };
 
-        window.onload = function() {
-            //process url parameters delimited by ;
-            if (location.search != "")
+    window.onload = function() {
+        //process url parameters delimited by ;
+        if (location.search != "")
+        {
+            //var x = location.search.substr(1).split(";");
+            var x = location.search.substr(1).split("&");
+            var c = document.getElementsByClassName("c");
+            var c1 = document.getElementsByClassName("c1");
+            var b  = document.body.getElementsByTagName("*");
+            for (var i=0; i<x.length; i++)
             {
-                //var x = location.search.substr(1).split(";");
-                var x = location.search.substr(1).split("&");
-                var c = document.getElementsByClassName("c");
-                var c1 = document.getElementsByClassName("c1");
-                for (var i=0; i<x.length; i++)
+                var y = x[i].split("=");
+                switch (y[0])
                 {
-                    var y = x[i].split("=");
-                    switch (y[0])
-                    {
-                        case "c":   if (y.length==1) 
-                                        show(c);
-                                    else 
-                                        hide(c);
-                                    break;
-                        case "c1" : show(c);
-                                    if (y.length==1)
-                                        show(c1, "inline-block");
-                                    else 
-                                        hide(c1);
-                                    break; 
-                        default:    break;
-                    }
-                    //alert("Key '" + y[0] + "' has the content '" + y[1]+"', length : " + y.length) ;
-                    //document.writeln("Key '" + y[0] + "' has the content '" + y[1]+"'<br />") ;
+                    case "b":   if (y.length==1)
+                                    show(b);
+                                else
+                                    hide(b);
+                                break;
+                    case "c":   if (y.length==1)
+                                    show(c);
+                                else
+                                    hide(c);
+                                break;
+                    case "c1" : show(c);
+                                if (y.length==1)
+                                    show(c1, "inline-block");
+                                else 
+                                    hide(c1);
+                                break; 
+                    default:    break;
                 }
-            }	
-        };
-    </script>
+                //alert("Key '" + y[0] + "' has the content '" + y[1]+"', length : " + y.length) ;
+                //document.writeln("Key '" + y[0] + "' has the content '" + y[1]+"'<br />") ;
+            }
+        }	
+    };
+</script>
 </head>
 <body>
 
