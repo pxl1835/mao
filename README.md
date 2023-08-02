@@ -27,4 +27,10 @@
       2.  Some CSS usages. Please see the comments in the <style></style> element below.
       3.  The use of javascript in the <script></script> element to achive dynamic or real time functionalities. 
 
-
+-- `8/2nd/2023 meeting on why such HTML layout/stucture:`
+       1.  Review 1.b above
+       2.  Demo 1.a above
+            a. width %
+            b. show/hide
+            c. move   
+       3.  css display inline-block vs flex         
