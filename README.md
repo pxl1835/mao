@@ -35,4 +35,4 @@
             b. show/hide
             c. move 
        2.  Review 1.b above  
-       3.  css display inline-block vs flex
+       3.  css display inline-block vs flex tbd 
