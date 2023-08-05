@@ -4,10 +4,10 @@
   <style>
     #container {
       position: absolute;
-      left: 0;
+      left: 0px;
       top: 150px;
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 150px;
       background-color: red;
     }
 	button {
@@ -19,21 +19,24 @@
 </head>
 <body>
  
-  <h2 title="<h2> with Hi There">Hi There</h2>
-  <h5 title="<h5> with How'sit going?">How's it going?</h5>
+  <h2 title="<h2> with Hi There">Hi There &lt;h2&gt; </h2>
+  <h5 title="<h5> with How's it going?">How's it going? &lt;h5&gt; </h5>
 
   <div id="container" style="left:100px;" title="container <div>">
-  
+ 
   </div>
 
   <!-- <button id="btn">Move</button>
   <script>
-    // Get the element
+    // Get the container element
     var el = document.getElementById("container");
-    // Move the element
-    //element.style.left = "200px";
+    // Set the container div's initial position
+    //el.style.left = "200px";
+    // Get the button element
     var btn = document.getElementById("btn");
+    // Creating move action for the button html element 
     btn.addEventListener("click", function(e){
+        // Move the container element when the button is clicked
         el.style.left = (el.offsetLeft + 5) + "px"; 		
     })
   </script> -->

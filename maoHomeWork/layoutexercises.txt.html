@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: center;
+        }
+        .c1 {
+            vertical-align: top;
+            border:1px dotted white; 
+            font-size: 16px;
+            color: white;
+        }
+        .c {
+            font-size: 0;
+            margin-top: 30px;
+        }
+        .c, .c1 {
+            border-radius: 25px;
+        }
+    </style>
+    <script>
+        //show empty body: ?b=0
+        //show container 1-4 : ?c or c1=0
+        //hide container 1-4 : ?c=0
+        //show c1 : ?c1
+        //hide c1 : ?c1=0
+        function show(c, d = "block") {
+            for(let i of c)
+                i.style.display = d;
+        };
+        function hide(c) {
+            for(let i of c)
+                i.style.display = "none";
+        };
+
+        window.onload = function() {
+            //process url parameters delimited by ;
+            if (location.search != "")
+            {
+                //var x = location.search.substr(1).split(";");
+                var x = location.search.substr(1).split("&");
+                var c = document.getElementsByClassName("c");
+                var c1 = document.getElementsByClassName("c1");
+                var b  = document.body.getElementsByTagName("*");
+                for (var i=0; i<x.length; i++)
+                {
+                    var y = x[i].split("=");
+                    switch (y[0])
+                    {
+                        case "b":   if (y.length==1)
+                                        show(b);
+                                    else
+                                        hide(b);
+                                    break;
+                        case "c":   if (y.length==1)
+                                        show(c);
+                                    else
+                                        hide(c);
+                                    break;
+                        case "c1" : show(c);
+                                    if (y.length==1)
+                                        show(c1, "inline-block");
+                                    else 
+                                        hide(c1);
+                                    break; 
+                        default:    break;
+                    }
+                    //alert("Key '" + y[0] + "' has the content '" + y[1]+"', length : " + y.length) ;
+                    //document.writeln("Key '" + y[0] + "' has the content '" + y[1]+"'<br />") ;
+                }
+            }	
+        };
+    </script>
+</head>
+<body>
+
+    <!-- 
+    p1. Create a replica of the webpage template in vs code by entering a ! 
+        and hit enter key without moving the mouse cursor . 
+-->
+<!-- 
+    p2. Move all exercise instructions in this file to be inside of the <body>, then under each exercise instruction, 
+        complete our exercises .
+-->
+<!-- 
+    p3. Create a <style> tag in the <head>, add css to remove all(css selector is *) html elements' defaults 
+        on padding, margin and border, add text-align: center;
+-->
+
+
+<!--
+    1. Create a <div> in <body>, the <div>'s width: 100%; of <body>,   height 100px; 
+       pick a background-color different than <body>;
+       text in <div> is PGCONF NYC .
+-->
+<div style="width: 100%; height: 50px; background-color: azure;"
+     title="show empty body: url?b=0;
+show body containers: ?c=0;
+show container 1-4: ?c1=0;
+show c1: ?c1; 
+hide c1: ?c1=0" >
+    PGCONF NYC
+</div>
+
+<!--
+    2. Create a <div> in <body>, the <div>'s width: 100%; of <body>,   height 200px; 
+       pick a background-color different than <body>;
+       text in <div> is PGCONF Logo .
+-->
+<div style="width: 100%; height: 300px; background-color:chartreuse">
+    PGCONF Logo
+</div>
+
+
+<!--
+    3. Create a <div> in <body>, the <div>'s width: 90%; of <body>, height 1000px; 
+       pick a background-color different than <body>;
+       text in the <div> is main container div, center it by adding its css: margin-left:auto; margin-right:auto;
+-->
+<div style="width: 60%;
+margin-left: auto; margin-right: auto;">
+    
+    <!-- p4 move all the following exercise instructions 
+     into the main container div
+     with the instruction number 3 earlier
+-->
+
+       <!-- 3.1  Create a <div> in the main container div, 
+                 the <div>'s width: 100%; of its parent,  height: 400px;  
+                 pick a background-color different than its parent; 
+                 text in this <div> is container 1 . 
+       -->
+       <div class="c" style="width: 100%; height: 400px; background-color:blanchedalmond;">
+           
+           <!-- 
+           p5. move all the following exercise instructions 3.1.1  -  3.1.3
+               into the container div 1 numbered 3.1 instruction:
+       -->
+       <!-- 
+           3.1.1 Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is JOIN US IN NEW YORK CITY! . 
+       -->
+       <div class="c1" style="width: 33%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           JOIN US IN NEW YORK CITY!
+       </div>
+       <!-- 
+           3.1.2  Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is POSTGRESQL COMMUNITY 
+       -->
+       <div class="c1" style="width: 33%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           POSTGRESQL COMMUNITY
+       </div>  
+       <!-- 
+            3.1.3  Create a <div> in the container div 1, 
+                 the <div>'s width: 30%; of its parent,  height: 100%;
+                 display: inline-block;
+                 pick a background-color different than its parent; 
+                 text in this <div> is SUSTAINABILITY  
+        -->
+        <div class="c1" style="width: 33%; height: 100%; background-color:blueviolet;
+                   display: inline-block;">
+           SUSTAINABILITY
+        </div>
+       </div>
+
+       <!-- 3.2  Create a <div> in the main container div, 
+                 the <div>'s width: 100%; of its parent,  height: 150px;  
+                 pick a background-color different than its parent; 
+                 text in this <div> is container 2 . 
+       -->
+       <div class="c" style="font-size: 16px; width: 100%; height: 150px; background-color:aqua">
+        container 2
+       </div>
+       <!-- 3.3  Create a <div> in the main container div, 
+                 the <div>'s width: 100%; of its parent,  height: 300px;  
+                 pick a background-color different than its parent; 
+                 text in this <div> is container 3 . 
+       -->
+       <div class="c" style="width: 100%; height: 300px; background-color:blanchedalmond;">
+        
+        <!--
+             p6. move all the following exercise instructions 3.3.1  -  3.3.2
+                 into the container div 3 numbered 3.3 instruction:
+         -->
+        <!--
+            3.3.1 Create a <div> in the container div 3,
+                  the <div>'s width: 40%; of its parent,  height: 100%;
+                  display: inline-block;
+                  pick a background-color different than its parent;
+                  text in this <div> is Call for Presentations Opens
+        -->
+        <div class="c1" style="width: 49.7%; height: 100%; background-color:blueviolet;
+                    display: inline-block;">
+             Call for Presentations Opens
+        </div>
+        <!--
+            3.3.2  Create a <div> in the container div 3,
+                  the <div>'s width: 40%; of its parent,  height: 100%;
+                  display: inline-block;
+                  pick a background-color different than its parent;
+                  text in this <div> is Early Bird Registration Closes
+        -->
+        <div class="c1" style="width: 49.7%; height: 100%; background-color:blueviolet;
+                    display: inline-block;">
+             Early Bird Registration Closes
+        </div>
+       </div>
+       <!-- 3.4  Create a <div> in the main container div, 
+                 the <div>'s width: 100%; of its parent,  height: 150px;  
+                 pick a background-color different than its parent; 
+                 text in this <div> is container 4 . 
+       -->
+       <div class="c" style="font-size: 16px; width: 100%; height: 150px; background-color:turquoise">
+        container 4
+       </div>
+</div>
+
+
+<!--
+    4. Create a <div> in <body>, the <div>'s width: 100%; of <body>,  height: 100px;  
+       pick a background-color different than <body>; 
+       text in the <div> is footer .    
+-->
+<div style="color: white; margin-top:100px; width:100%; height: 50px; background-color:cadetblue">
+    footer
+</div>
+
+
+
+</body>
+</html>
+
