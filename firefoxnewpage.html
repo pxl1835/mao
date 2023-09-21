@@ -47,21 +47,48 @@
     id="widgetcontainer"
     style=" 
              width:80%;
-             /* height:100px; */
+             height:100px;
              background-color:aquamarine;
              margin: auto;
-             /* display: flex;
-             flex-wrap: nowrap; */
-             background-color: DodgerBlue;
-             
           "
   >
-  <div class="w">1</div>
-  <!-- <div class="w">2</div>
-  <div class="w">3</div>
-  <div class="w">4</div> -->
-  <div class="w">5</div> 
+  widgetcontainer
   </div>
+  <script>
+    let b = 0.03 //8%
+    let n = 8   // number of widgets
+    let ml = ((1-n*b)/(n+1))*100
+    alert("b="+b +", n=" + n + ", margin-left = ((1-n*b)/(n+1))*100 = " + ml + "%") 
+  </script>
+  <style> 
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .w {
+      /* height:70%; */
+      width:3%;
+      display: inline-block;
+      margin-left: 8.4%; /*5.49%; /*7.4%; /*13.59%; /*27.9%; /*19%; /*9.5%;   = (1-nb(in%)) / (n+1) in % */
+      margin-top: 1%;  
+      margin-bottom: 1%;  
+      background-color: #f1f1f1;
+      text-align: center;
+      line-height: 100%;
+      font-size: 430%;
+      /* box-sizing: content-box; */
+      box-sizing:var(3%);
+  
+      /* display : flex on parent */
+      /* background-color: #f1f1f1;
+      width: 100px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+      margin: 10px; */
+
+    }
+  </style>
 
   <div
     id="cardscontainer"
